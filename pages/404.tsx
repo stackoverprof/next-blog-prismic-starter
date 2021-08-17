@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from '@components/_shared/Link';
 
-const error404 = (): JSX.Element => {
+const Page404 = (): JSX.Element => {
 
 	return (
 		<div className="fullscreen flex-cc col">
@@ -12,4 +12,4 @@ const error404 = (): JSX.Element => {
 };
 
 
-export default error404;
+export default Page404;

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import AlertHandler from '@components/_shared/AlertHandler';
 import { useLayout } from '@core/contexts/index';
 import useClearance from '@core/hooks/useClearance';
+import SEOTags from '@components/_shared/SEOTags';
 
 interface Props {
 	children: React.ReactNode
@@ -10,21 +11,22 @@ interface Props {
 	className?: string
 }
 
-const DynamicLayout = ({children, title, className}: Props): JSX.Element => {
+const MainLayout = ({children, title, className}: Props): JSX.Element => {
 	const { alert_value, resetAlert } = useLayout();
 	const [clearance, upperRef, lowerRef] = useClearance();
 
 	return (
 		<>
 			<Head>
-				{title && <title>{title} — Hybrid</title>}
+				{title && <title>{title} — My Site</title>}
+				<SEOTags />
 			</Head>
 
 			<header ref={upperRef}>
 				{/* Navbar things */}
 			</header>
 
-			<main style={{minHeight: clearance}} className={`${className} overflow-x-hidden`}>
+			<main style={{minHeight: clearance}} className={className}>
 				{children}
 			</main>
 
@@ -37,4 +39,4 @@ const DynamicLayout = ({children, title, className}: Props): JSX.Element => {
 	);
 };
 
-export default DynamicLayout;
+export default MainLayout;

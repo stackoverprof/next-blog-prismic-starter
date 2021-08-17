@@ -23,7 +23,7 @@ const Form = (): JSX.Element => {
 	};
 
 	return (
-		<MainLayout title="About" className="flex-cc col">
+		<MainLayout title="Form" className="flex-cc col">
 			<h1 className="mb-4 text-4xl font-bold">Form</h1>
 
 			<form onSubmit={handleSubmit} className="flex-cs col gap-4 mb-12">
@@ -32,7 +32,7 @@ const Form = (): JSX.Element => {
 				<textarea name="story" value={form.story} onChange={mutateForm} placeholder="What is your story?" />
 				<button type="submit">SUBMIT</button>
 			</form>
-			
+
 			<Link href="/" className="px-4 py-2 text-white bg-blue-400" zoomed>TO HOME</Link>
 		</MainLayout>
 	);
