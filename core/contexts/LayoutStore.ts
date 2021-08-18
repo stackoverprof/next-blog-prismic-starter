@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { EnumType } from '@components/_shared/AlertHandler';
+import { EnumType } from '@components/_Shared/AlertHandler';
 
 const LayoutStore = (): LayoutStoreType => {
 	const [alert_value, Alert] = useState<AlertType | null>(null);

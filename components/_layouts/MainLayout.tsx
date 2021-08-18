@@ -1,32 +1,29 @@
 import React from 'react';
-import Head from 'next/head';
-import AlertHandler from '@components/_shared/AlertHandler';
-import { useLayout } from '@core/contexts/index';
 import useClearance from '@core/hooks/useClearance';
-import SEOTags from '@components/_shared/SEOTags';
+import { useLayout } from '@core/contexts';
+import AlertHandler from '@components/_Shared/AlertHandler';
+import SEOTags from '@components/_Shared/SEOTags';
 
 interface Props {
 	children: React.ReactNode
 	title?: string
 	className?: string
+	style?: React.CSSProperties
 }
 
-const MainLayout = ({children, title, className}: Props): JSX.Element => {
+const MainLayout = ({children, title, className, style}: Props): JSX.Element => {
 	const { alert_value, resetAlert } = useLayout();
 	const [clearance, upperRef, lowerRef] = useClearance();
 
 	return (
 		<>
-			<Head>
-				{title && <title>{title} — My Site</title>}
-				<SEOTags />
-			</Head>
+			<SEOTags title={title} />
 
 			<header ref={upperRef}>
 				{/* Navbar things */}
 			</header>
 
-			<main style={{minHeight: clearance}} className={className}>
+			<main style={{minHeight: clearance, ...style}} className={className}>
 				{children}
 			</main>
 

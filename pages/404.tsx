@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from '@components/_shared/Link';
+import Link from '@components/_Shared/Link';
 
 const Page404 = (): JSX.Element => {
 
