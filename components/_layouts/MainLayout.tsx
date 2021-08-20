@@ -1,8 +1,8 @@
 import React from 'react';
 import useClearance from '@core/hooks/useClearance';
 import { useLayout } from '@core/contexts';
-import AlertHandler from '@components/_Shared/AlertHandler';
-import SEOTags from '@components/_Shared/SEOTags';
+import AlertHandler from '@components/_shared/AlertHandler';
+import SEOTags from '@components/_shared/SEOTags';
 
 interface Props {
 	children: React.ReactNode

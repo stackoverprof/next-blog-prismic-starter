@@ -1,5 +1,5 @@
 # Next (Basic) Starter
-## The approach to make a fully customizable web-app from a CMS
+### The template for a quick and intuitive workflow with Next.js and tailwindcss
 
 **Technologies:**
 

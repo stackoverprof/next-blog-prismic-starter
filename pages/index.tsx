@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import MainLayout from '@components/_Layouts/MainLayout';
+import MainLayout from '@components/_layouts/MainLayout';
 import { useLayout } from '@core/contexts';
-import Link from '@components/_Shared/Link';
+import Link from '@components/_shared/Link';
  
 const Index = (): JSX.Element => {
 	const { Alert } = useLayout();
@@ -32,6 +32,6 @@ const Index = (): JSX.Element => {
 // useLayout: which is a custom hooks in context management
 // Alert: custom popping out alert box that automatically vanish
 // Link: custom link that can be styled into anything and is so comfortable
-// MainLayout: open 'components/_layout/', that is the place where you put navbar and footer, not here
+// MainLayout: open 'components/_layouts/', that is the place where you put navbar and footer, not here
 
 export default Index;

@@ -1,7 +1,7 @@
 import React from 'react';
-import MainLayout from '@components/_Layouts/MainLayout';
+import MainLayout from '@components/_layouts/MainLayout';
 import { useLayout } from '@core/contexts';
-import Link from '@components/_Shared/Link';
+import Link from '@components/_shared/Link';
  
 const About = (): JSX.Element => {
 	const { Alert } = useLayout(); 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import MainLayout from '@components/_Layouts/MainLayout';
-import Link from '@components/_Shared/Link';
+import MainLayout from '@components/_layouts/MainLayout';
+import Link from '@components/_shared/Link';
 import useForm from '@core/hooks/useForm';
 
 interface FormType {
@@ -12,7 +12,7 @@ interface FormType {
 const Form = (): JSX.Element => {
 	const [isLoading, setIsLoading] = useState(false);
 
-	const [form, mutateForm, resetForm] = useForm<FormType>({
+	const {form, mutateForm, resetForm} = useForm<FormType>({
 		nickname: '',
 		city: '',
 		story: ''
@@ -29,7 +29,6 @@ const Form = (): JSX.Element => {
 			setIsLoading(false);
 		}, 1000);
 	};
-
 
 	return (
 		<MainLayout title="Form" className="flex-cc col">

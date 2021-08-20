@@ -15,7 +15,7 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
 				<meta name="theme-color" content="#000000" />
 			</Head>
 			<ProgressBar
-				color="#9900CF"
+				color="#000"
 				startPosition={0.3}
 				stopDelayMs={200}
 				height={3}
